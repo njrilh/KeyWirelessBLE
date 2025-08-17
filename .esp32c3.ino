@@ -1,7 +1,7 @@
 #include <BLEDevice.h>
 #include <BLEUtils.h>
 #include <BLEServer.h>
-#include <max6675.h>
+// #include <max6675.h>
 
 #define SERVICE_UUID        "12345678-1234-5678-1234-56789abcdef0"
 #define CHARACTERISTIC_UUID "abcd1234-5678-1234-5678-abcdef123456"
@@ -52,13 +52,14 @@ void alert() {
     digitalWrite(beepPin, LOW);
 };
 
-void readTemp() {
-    float cel = thermocouple.readCelsius();
-    Serial.println(cel);
-    char suhu[6];
-    dtostrf(cel, 4, 2, suhu);
-    client.publish(myTopic, suhu);
-}
+// void readTemp() {
+//     float cel = thermocouple.readCelsius();
+//     Serial.println(cel);
+//     char suhu[6];
+//     dtostrf(cel, 4, 2, suhu);
+//     pCharacteristic->setValue((uint8_t*)suhu, strlen(suhu));
+//     pCharacteristic->notify();
+// }
 
 class MyServerCallbacks : public BLEServerCallbacks {
     void onConnect(BLEServer* pServer) {
@@ -132,6 +133,9 @@ void setup() {
 }
 
 void loop() {
-
+    // if (suhu == true) {
+    //     readTEmp();
+    //     delay(5000);
+    // }
 }
 
