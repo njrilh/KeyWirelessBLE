@@ -1,0 +1,17 @@
+{
+  "port": "COM4",
+  "configuration": "led=2,baud=115200,xtal=80,CrystalFreq=26,eesz=1M64,FlashMode=dout,FlashFreq=40,ResetMethod=nodemcu,dbg=Disabled,lvl=None____,ip=lm2f,vt=flash,exception=disabled,stacksmash=disabled,wipe=none,sdk=nonosdk_190703,ssl=all,mmu=3232,non32xfer=fast",
+  "output": "build",
+  "board": "esp8266:esp8266:generic",
+  "programmer": "",
+  "useProgrammer": false,
+  "configurationRequired": true,
+  "monitorPortSettings": {
+    "port": "COM4",
+    "baudRate": 9600,
+    "lineEnding": "\r\n",
+    "dataBits": 8,
+    "parity": "none",
+    "stopBits": "one"
+  }
+}
